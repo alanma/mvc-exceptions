@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.stereotype.Component;
-import org.thymeleaf.spring3.SpringTemplateEngine;
+import org.thymeleaf.spring4.SpringTemplateEngine;
 
 import ch.qos.logback.classic.Level;
 

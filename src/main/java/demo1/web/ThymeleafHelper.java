@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfigurati
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
-import org.thymeleaf.spring3.SpringTemplateEngine;
+import org.thymeleaf.spring4.SpringTemplateEngine;
 
 /**
  * A couple of handy utility functions. Nothing to do with exception handling,

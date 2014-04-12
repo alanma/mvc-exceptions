@@ -1,18 +1,19 @@
 package demo1.main;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.SpringBootServletInitializer;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+//import org.springframework.boot.web.SpringBootServletInitializer;
 
 /**
  * Main entry point for our application using Spring Boot. It can be run as an
@@ -172,12 +173,12 @@ public class Main extends SpringBootServletInitializer {
 	 * Configure the application usign the supplied builder. This method is
 	 * invoked automatically when running in a container and explicitly by
 	 * {@link #runAsJavaApplication(String[])}.
-	 * 
-	 * @param application
-	 *            Spring Boot application builder.
-	 */
+	 *
+     * @param application
+     *            Spring Boot application builder.
+     */
 	@Override
-	protected void configure(SpringApplicationBuilder application) {
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		application.sources(Main.class);
 
 		// Set active profiles.
@@ -203,5 +204,6 @@ public class Main extends SpringBootServletInitializer {
 		// properties by iterating over them and using System.setProperty(). DO
 		// NOT use system.setProperties() or you will lose all the default
 		// properties and get some very weird errors!
-	}
+        return application;
+    }
 }
